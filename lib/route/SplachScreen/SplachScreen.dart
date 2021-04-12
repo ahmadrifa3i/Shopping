@@ -36,6 +36,31 @@ class _SplachScreen extends State<SplachScreenstate>{
   }
   Future<void> navigatonpage(){
     print("finish time");
+    //hotell
+    //create room 0 Route =>onback exit app
+    //pushnamedreplacemnt
+    //create room 1 teb3a lal route=>onback=>exit app
+    //pushnamed
+    //create room 1 teb3a lal route=>onback=>room 0
+
+   // pushnamedreplacemnt
+    //create room 2 teb3a lal route=>onback=>room 0
+   // 2- boy()
+    // pushnamed
+    //create room 3 teb3a lal route=>onback=>room 2
+    // 3- boy()
+    // pushnamedreplacement
+    //create room 3 teb3a lal route=>onback=>room 2
+    // 3- boy()
+
+//exit app
+ //1-  boy (splach screnn)
+    //2-boy ( home) //onbcakc
+  // Navigator.of(context).push( new  );
+ //  Navigator.of(context).pushNamed("/home");
+   Navigator.of(context).pushReplacementNamed("/home");
+
+
    // Navigator.of(context).push(route);//onback  btzzakar first
    // Navigator.of(context).pushNamed("/home");
     //splach first
@@ -43,7 +68,7 @@ class _SplachScreen extends State<SplachScreenstate>{
     //new page =>first
   //  Navigator.of(context).pushReplacementNamed("/home");
     //pushreplacemnetNamed  => root sar home
-    Navigator.of(context).pushReplacementNamed('/home');//onbackpressed =.close application
+ //   Navigator.of(context).pushReplacementNamed('/home');//onbackpressed =.close application
     //pushNamed  => home mch root //back brtdni splachscreen
    // Navigator.of(context).pushNamed("/home");// onbackpressed=>onback splach screen
 

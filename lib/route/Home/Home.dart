@@ -49,16 +49,19 @@ setState(() {
                   UserAccountsDrawerHeader(accountName: Text("person.name"), accountEmail: Text("person.mail"),currentAccountPicture: CircleAvatar(child:Icon(Icons.person),backgroundColor: Colors.red,),decoration: BoxDecoration(color: Colors.redAccent,image: DecorationImage(image: NetworkImage("https://ahead.ie/userfiles/images/Featured_Images/LINK/link_banner.png"),fit: BoxFit.fill)),),
                   ListTile(title: Text("Home"),leading: Icon(Icons.home),subtitle: Text("lastupdate :12/3/2020"),),
                   ListTile(title: Text("Order List"),leading: Icon(Icons.shopping_bag),subtitle: Text("you have order saved"),),
-                  ListTile(title: Text("Sports"),leading: Icon(Icons.directions_run),subtitle: Text("${numbermessage} messages"),onTap: (){
-                    updatenumbermessage();
+                  ListTile(title: Text("Details"),leading: Icon(Icons.details),subtitle: Text("${numbermessage} messages"),onTap: (){
+                    Navigator.of(context).pushNamed("/details");
+                  },),
+                  ListTile(title: Text("DetailsREP"),leading: Icon(Icons.details),subtitle: Text("${numbermessage} messages"),onTap: (){
+                    Navigator.of(context).pushNamed("/h2o");
                   },),
                   ListTile(title: Text("About"),leading: Icon(Icons.details),),
                   ListTile(title: Text("LogOut"),leading: Icon(Icons.logout),)
                 ],)
             ),
         body:  SizedBox(
-            height: 50.0,
-            width: 50.0,
+            height: 300.0,
+            width: double.infinity,
             child: Carousel(
               boxFit: BoxFit.cover,
               autoplay: false,
@@ -72,9 +75,9 @@ setState(() {
               showIndicator: true,
               indicatorBgPadding: 7.0,
               images: [
-                NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
-                ExactAssetImage("assets/images/LaunchImage.jpg"),
+                AssetImage("assets/images/fabric.jpg"),
+                AssetImage("assets/images/images.jpeg"),
+            //  ExactAssetImage("assets/images/LaunchImage.jpg"),
               ],
             ),
           ),
