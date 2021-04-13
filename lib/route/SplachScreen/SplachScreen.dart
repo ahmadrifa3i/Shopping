@@ -58,7 +58,7 @@ class _SplachScreen extends State<SplachScreenstate>{
     //2-boy ( home) //onbcakc
   // Navigator.of(context).push( new  );
  //  Navigator.of(context).pushNamed("/home");
-   Navigator.of(context).pushReplacementNamed("/home");
+   Navigator.of(context).pushReplacementNamed("/dashboard");
 
 
    // Navigator.of(context).push(route);//onback  btzzakar first

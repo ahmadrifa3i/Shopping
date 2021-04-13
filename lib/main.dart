@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterappbar/rifaidata/dahsboard/dashboard_pay_bill.dart';
 import 'package:masterappbar/route/Home/Home.dart';
 import 'package:masterappbar/route/SplachScreen/SplachScreen.dart';
 import 'package:masterappbar/route/details/details.dart';
@@ -28,6 +29,7 @@ class AppBarAliExpress extends StatelessWidget {
           "/h2o":(BuildContext context)=> hoState(),
           "/fe":(BuildContext context)=> feState(),
           "/ch":(BuildContext context)=> ChState(),
+        "/dashboard":(BuildContext context)=> DashboardPayBillRoute()
           //"/home":(BuildContext context)=> HomeAliExpressState()
       },
     );
