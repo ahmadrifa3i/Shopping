@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:masterappbar/database/database.dart';
 class SplachScreenstate extends StatefulWidget{
 
   _SplachScreen createState()=>_SplachScreen();
 }
 class _SplachScreen extends State<SplachScreenstate>{
   String text="first";
+  ALiExpressStore db=new ALiExpressStore();
   @override
   Widget build(BuildContext context) {
   return Scaffold(
@@ -20,11 +22,13 @@ class _SplachScreen extends State<SplachScreenstate>{
   @override
   void initState() {
     super.initState();
-
+readydb();
 
 
     startTime();
 
+  } readydb() async{
+    await db.initDB();
   }
   startTime() async{
     print("start time");
@@ -58,7 +62,7 @@ class _SplachScreen extends State<SplachScreenstate>{
     //2-boy ( home) //onbcakc
   // Navigator.of(context).push( new  );
  //  Navigator.of(context).pushNamed("/home");
-   Navigator.of(context).pushReplacementNamed("/dashboard");
+   Navigator.of(context).pushReplacementNamed("/home");
 
 
    // Navigator.of(context).push(route);//onback  btzzakar first

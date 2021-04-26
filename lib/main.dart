@@ -7,9 +7,25 @@ import 'package:masterappbar/route/detailsPushReplacement/detailsreplecemnt.dart
 import 'package:masterappbar/route/rayan/fe/ch.dart';
 import 'package:masterappbar/route/rayan/fe/fe.dart';
 import 'package:masterappbar/route/rayan/h2o.dart';
+import 'package:provider/provider.dart';
+
+import 'Modelview/homeprovider.dart';
 
 
-void main()=>runApp(AppBarAliExpress());
+void main() {
+  runApp(
+      MultiProvider(
+          providers: [
+            ChangeNotifierProvider<homeprovider>.value(value: homeprovider ()),
+
+          ],
+
+
+child:  AppBarAliExpress())
+
+
+  );
+}
 
 class AppBarAliExpress extends StatelessWidget {
  // String numbermessage = "122";
@@ -17,7 +33,8 @@ class AppBarAliExpress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
+    return
+      MaterialApp(
         title: "Ali express",
         debugShowCheckedModeBanner: false,
         home:SplachScreenstate(),
