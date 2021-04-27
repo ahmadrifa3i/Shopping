@@ -7,6 +7,7 @@ import 'package:masterappbar/%20model/person.dart';
 import 'package:masterappbar/Modelview/homeprovider.dart';
 import 'package:masterappbar/Modelview/homeprovider.dart';
 import 'package:masterappbar/api/APIRole.dart';
+import 'package:masterappbar/api/APIget.dart';
 import 'package:masterappbar/database/database.dart';
 import 'package:masterappbar/rifaidata/Model/Carousel.dart';
 import 'package:provider/provider.dart';
@@ -66,6 +67,7 @@ Future <void> getdatafromapi() async {
       finishgetdata=false;
     });
 await ApiRole.getRole("advertiser@tv.com", "P@ssw0rd");
+await Apiget.getRole();
 setState(() {
   finishgetdata=true;
 });

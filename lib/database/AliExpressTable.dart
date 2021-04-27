@@ -8,14 +8,32 @@ class aliexpresstable{
   static const kMail="Mail";
   static const kRole="Role";
   static const kToken="Token";
+  static const kUserId="userId";
+  static const kTitle="title";
+  static const kCompleted="completed";
+ // static const kId="id";
 
-  // int integer
-  //string text
-//bool  1 0
 
 
 
 }
+
+
+String queryUsers="CREATE TABLE IF NOT EXISTS USERS("
+    "${aliexpresstable.kId}  INTEGER PRIMARY KEY,"
+    "${aliexpresstable.kUserId} INTEGER,"
+    "${aliexpresstable.kTitle} TEXT,"
+    "${aliexpresstable.kCompleted} INTEGER "
+    ")";
+
+
+
+
+
+
+
+
+
 
 String queryaliuserRoleOrToken="CREATE TABLE IF NOT EXISTS USERROLE( "
 

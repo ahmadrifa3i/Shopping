@@ -1,6 +1,7 @@
 
 import 'dart:io';
 
+import 'package:masterappbar/%20model/Users.dart';
 import 'package:masterappbar/%20model/person.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -24,7 +25,7 @@ Future<Database> get database async{
 initDB()async{
   Database db=await openDatabase(
     await dbPath(),
-    version:5,
+    version:6,
     onCreate: createdb,
     onUpgrade: updatedb);
   return db;
@@ -42,6 +43,7 @@ void createdb(Database db,int version) async
 {
 db.execute(queryaliuser);
 db.execute(queryaliuserRoleOrToken);
+db.execute(queryUsers);
 
 }
 updatedb(Database db,int oldVersion,int newversion) async{
@@ -76,6 +78,40 @@ print("from for");
 
  }
 }
+
+
+Future<List<Users>> getallUsers()async{
+  Database db=await this.database;
+
+  try{
+    var query=await db.rawQuery("SELECT * FROM USERS");
+
+    List<Map> result=query;
+    List<Users> listofalluser=[];
+    for(var u in result){
+      print("from for");
+      Users user=Users.fromMap(u);
+      listofalluser.add(user);
+    }
+    print("database get list done");
+    return listofalluser;
+
+
+
+
+  }catch(e){
+
+  }
+}
+
+
+
+
+
+
+
+
+
 }
 
 

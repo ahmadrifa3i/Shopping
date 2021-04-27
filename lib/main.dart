@@ -4,6 +4,7 @@ import 'package:masterappbar/route/Home/Home.dart';
 import 'package:masterappbar/route/SplachScreen/SplachScreen.dart';
 import 'package:masterappbar/route/details/details.dart';
 import 'package:masterappbar/route/detailsPushReplacement/detailsreplecemnt.dart';
+import 'package:masterappbar/route/listusers/ListUsers.dart';
 import 'package:masterappbar/route/rayan/fe/ch.dart';
 import 'package:masterappbar/route/rayan/fe/fe.dart';
 import 'package:masterappbar/route/rayan/h2o.dart';
@@ -40,7 +41,8 @@ class AppBarAliExpress extends StatelessWidget {
         home:SplachScreenstate(),
       routes: <String,WidgetBuilder>{
       //  '/Login': (BuildContext context) => new LoginImageTealRoute(),
-          "/home":(BuildContext context)=> HomeAliExpressState(),
+       //   "/home":(BuildContext context)=> HomeAliExpressState(),
+          "/home":(BuildContext context)=>ListUsers(),
           "/details":(BuildContext context)=> DetailsAliExpressState(),
           "/detailsrep":(BuildContext context)=> DetailRepsAliExpressState(),
           "/h2o":(BuildContext context)=> hoState(),
